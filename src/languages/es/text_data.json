@@ -1,0 +1,17 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "service": "Servicios",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+    "language": {
+      "spain": "Español",
+      "unitedStates": "Inglés"
+    },
+    "text":{
+      "contain": "Hola Darlin, esta es nuestra primera prueba de lenguage.",
+      "carousel_text": "Mira nuestras nuevas ofertas"
+    }
+  }
+  
