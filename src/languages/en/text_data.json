@@ -5,14 +5,87 @@
     "projects": "Projects",
     "contact": "Contact Form"
   },
-    "language": {
-      "spain": "Spanish",
-      "unitedStates": "English"
+  "language": {
+    "spain": "Spanish",
+    "unitedStates": "English"
+  },
+  "text": {
+    "contain": "Hello Darlin, this our first Language test",
+    "carousel_text": "See our new offers"
+  },
+  "man_data": {
+    "btn-cart":{
+      "text1": "Add to cart",
+      "text2": "Buy now"
     },
-    "text":{
-      "contain": "Hello Darlin, this our first Language test",
-      "carousel_text": "See our new offers"
+    "btn-back":{
+      "text": "Go back"
+    },
+    "units":{
+      "units-sold": "Units Sold",
+      "days": "Days left"
+    },
+    "electronic": {
+      "AIRPODSMAXAPPLE": {
+        "name": "Airpods Max Series 1",
+        "price": "640",
+        "type": "Headphones",
+        "quantity": "230"
+      },
+      "GAMINGHEADPHONES": {
+        "name": "Lenovo 7030",
+        "price": "120",
+        "type": "Gaming Headphones",
+        "quantity": "150"
+      },
+      "IPHONE14PROMAX": {
+        "name": "iPhone 14 Pro Max",
+        "price": "1500",
+        "type": "Smartphone",
+        "quantity": "100"
+      },
+      "MOUSEGAMINGTHREADRIPPER": {
+        "name": "Gaming Mouse ThreadRipper",
+        "price": "80",
+        "type": "Gaming Mouse",
+        "quantity": "300"
+      },
+      "KEYBOARDGAMING": {
+        "name": "Dell 2030 Gaming Keyboard",
+        "price": "120",
+        "type": "Gaming Keyboard",
+        "quantity": "200"
+      },
+      "PCGAMING": {
+        "name": "Lenovo Gaming Tower",
+        "price": "2500",
+        "type": "Gaming PC",
+        "quantity": "50"
+      },
+      "GAMINGCHAIRSX": {
+        "name": "Andovia TK70 Gaming Chair",
+        "price": "300",
+        "type": "Gaming Chair",
+        "quantity": "100"
+      },
+      "GAMINGTABLESX3": {
+        "name": "HP 1230 Gaming Desk",
+        "price": "150",
+        "type": "Gaming Desk",
+        "quantity": "80"
+      },
+      "BIGCHAIRGAMING60SLX": {
+        "name": "60SLX Big Gaming Chair",
+        "price": "500",
+        "type": "Big Gaming Chair",
+        "quantity": "70"
+      },
+      "SAMSUNGGALAXYS23ULTRA": {
+        "name": "Samsung Galaxy S23 Ultra",
+        "price": "1200",
+        "type": "Smartphone",
+        "quantity": "120"
+      }
     }
   }
-  
-
+}

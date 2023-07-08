@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 
-export const Button = ({name, clase, modaltoggle, modaltarget}) => {
+export const Button = ({name, clase, modaltoggle, modaltarget, onClick}) => {
     
     clase === undefined ? clase='btn' : clase+= ' btn' 
-    return <button className={clase} data-bs-toggle={modaltoggle} data-bs-target={modaltarget}> {name}  </button>
+    return <button className={clase} onClick={onClick} data-bs-toggle={modaltoggle} data-bs-target={modaltarget}> {name}  </button>
 }
 
 

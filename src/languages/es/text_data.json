@@ -5,13 +5,89 @@
     "projects": "Proyectos",
     "contact": "Contacto"
   },
-    "language": {
-      "spain": "Español",
-      "unitedStates": "Inglés"
+  "language": {
+    "spain": "Español",
+    "unitedStates": "Inglés"
+  },
+  "text": {
+    "contain": "Hola Darlin, esta es nuestra primera prueba de lenguage.",
+    "carousel_text": "Mira nuestras nuevas ofertas"
+  },
+  "man_data": {
+    "btn-cart":{
+      "text1": "Añadir a la cesta",
+      "text2": "Comprar ahora"
     },
-    "text":{
-      "contain": "Hola Darlin, esta es nuestra primera prueba de lenguage.",
-      "carousel_text": "Mira nuestras nuevas ofertas"
+    "btn-back":{
+      "text": "Volver"
+    },
+    "units":{
+      "units-sold": "Und vendidas",
+      "days": "Días restantes"
+    },
+    "electronic": {
+      "AIRPODSMAXAPPLE": {
+        "name": "Airpods Max Serie 1",
+        "price": "640",
+        "type": "Auriculares",
+        "quantity": "230"
+      },
+      "GAMINGHEADPHONES": {
+        "name": "Lenovo 7030",
+        "price": "120",
+        "type": "Auriculares Gamer",
+        "quantity": "150"
+      },
+      "IPHONE14PROMAX": {
+        "name": "Iphone 14 Pro max",
+        "price": "1500",
+        "type": "Teléfono inteligente",
+        "quantity": "100"
+      },
+      "MOUSEGAMINGTHREADRIPPER": {
+        "name": "Ratón Gamer ThreadRipper",
+        "price": "80",
+        "type": "Ratón Gamer",
+        "quantity": "300"
+      },
+      "KEYBOARDGAMING": {
+        "name": "Teclado Gamer Dell 2030",
+        "price": "120",
+        "type": "Teclado Gamer",
+        "quantity": "200"
+      },
+      "PCGAMING": {
+        "name": "Torre Gamer Lenovo",
+        "price": "2500",
+        "type": "PC Gamer",
+        "quantity": "50"
+      },
+      "GAMINGCHAIRSX": {
+        "name": "Silla Gamer Andovia TK70",
+        "price": "300",
+        "type": "Silla Gamer",
+        "quantity": "100"
+      },
+      "GAMINGTABLESX3": {
+        "name": "Mesa Gamer HP 1230",
+        "price": "150",
+        "type": "Mesa Gamer",
+        "quantity": "80"
+      },
+      "BIGCHAIRGAMING60SLX": {
+        "name": "Silla Grande 60SLX",
+        "price": "500",
+        "type": "Silla grande Gamer",
+        "quantity": "70"
+      },
+      "SAMSUNGGALAXYS23ULTRA": {
+        "name": "Samsung Galaxy S23 Ultra",
+        "price": "1200",
+        "type": "Teléfono inteligente",
+        "quantity": "120"
+      }
     }
   }
   
+  
+}

@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Infant:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agdasima&family=Nunito:ital,wght@1,300&family=Oswald:wght@300&display=swap');
+
+.card{
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    justify-content: center;
+  }
+  
+  .productList{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .productCard{
+    position: relative;
+    background-color: #FDFDFD;
+    margin: 1rem;
+    flex: 1 0 25rem;
+    max-width: 20rem;
+    max-height: 50rem;
+    transition: 0.2s;
+    border: 1px solid rgba(231, 226, 226, 0.267);
+  }
+  
+  .productCard:hover{
+    transform: translateY(-0.5rem);
+    box-shadow: 0.5rem 0.75rem 1.5rem #bbbbbb;
+    border: none;
+  }
+  
+  .productImage{
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .productCard__cart{
+    position: absolute;
+    right: 0;
+    font-size: 2rem;
+    transition: 0.2s;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+    color: rgba(0, 0, 0, 0.849);
+    
+  }
+  
+  .productCard__wishlist{
+    position: absolute;
+    right: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+    color: rgba(0, 0, 0, 0.849);
+    font-size: 2rem;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  
+  .productCard__fastSelling {
+    position: absolute;
+    font-size: 2rem;
+    left: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+    color: rgba(0, 0, 0, 0.849);
+    fill: var(--color-orange-primary);
+  }
+
+  .productCard__fastSelling:hover, .productCard__wishlist:hover, .productCard__cart:hover{
+    color: rgb(255, 102, 0);
+    font-size: 2.2rem;
+  }
+  
+  .productCard__content {
+    margin: 2rem;
+  }
+  
+  .mt-x{
+    margin-top: 6rem;
+  }
+
+  .productName{
+    font-size: 1.5rem;
+  }
+  
+  .displayStack__1,
+  .displayStack__2{
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .productPrice{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .productSales,
+  .productTime{
+    font-size: 1.1rem;
+  }
+
+  @media (min-width: 1330px) {
+    .react-multi-carousel-list  {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+  }
+  
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.product-actions button{
+  padding: 1rem;
+  width: 100%;
+}
+
+.product-name{
+  font-family: 'Ysabeau Infant', sans-serif;
+}
+
+.product-type{
+  font-family: 'Nunito', sans-serif;
+}
+
+.product-price{
+  font-family: 'Agdasima', sans-serif;
+}
+
+.talla-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  grid-gap: 10px; /* Espacio entre las tallas */
+}
+
+.talla-selector p{
+  font-family: 'Oswald', sans-serif;
+
+}
+
+.talla-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.talla-option:hover{
+  background-color: rgba(0, 0, 0, 0.644);
+}
+
+.selected {
+  background-color: rgb(26, 25, 25);
+  color: white;
+}

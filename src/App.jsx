@@ -6,6 +6,37 @@ import { FaMoon, FaSun } from 'react-icons/fa';
 import { MainCarousel } from './components/carouselMain';
 import { Route, Routes } from 'react-router-dom'
 import { Link, useParams } from 'react-router-dom'
+import { ProductData } from './components/Products';
+import { CardProducts } from './components/Cards';
+import './Cards.css'
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { Details } from './components/Products_detail';
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1815 },
+    items: 5,
+  },
+  tablet: {
+    breakpoint: { max: 1045, min: 650 },
+    items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 649, min: 0 },
+    items: 1,
+  },
+  custom1: {
+    breakpoint: { max: 1499, min: 1046 },
+    items: 3,
+  },
+  custom2: {
+    breakpoint: { max: 1814, min: 1500 },
+    items: 4,
+  },
+  
+  // Agrega más breakpoints personalizados si es necesario
+};
+
 export const App3 = () => {
 
   const Home = () => <h1>Home</h1>
@@ -61,6 +92,25 @@ export const App3 = () => {
   )
 }
 
+const Cards = () =>{
+  return(
+<Carousel responsive={responsive}>
+      {ProductData.map((product) => (
+        <div key={product.id}>
+          <CardProducts
+            image={product.image}
+            name={product.name}
+            price={product.price}
+            totalSales={product.totalSales}
+            timeLeft={product.timeLeft}
+            rating={product.rating}
+          />
+        </div>
+      ))}
+    </Carousel>
+            )
+}
+
 
 export const App = () => {
 
@@ -92,8 +142,14 @@ export const App = () => {
     </nav>
     
     <Routes>
-      <Route path='/' element={<App2/>} />
+      <Route path='/' element={
+        <>
+      <App2/> 
+      <Cards/>
+      </>} />
       <Route path='/service' element={<Services/>} />
+      <Route path='/hombres/:product' element={<Details/>} />
+      <Route path='*' element={<h1 className='text-center mt-5'>Not Found</h1>}/>
     </Routes>
     </>
   )
@@ -197,6 +253,8 @@ export const Btnlightdark = () => {
     </>
   );
 };
+
+
 
 export const Itext = ({label, clase, readonly,type, value, onChange, min, max, id}) => {
   clase === undefined ? clase='me-2 ms-2' : clase+= ' me-2 ms-2'
