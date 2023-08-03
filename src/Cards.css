@@ -10,14 +10,11 @@
   .productList{
     display: flex;
     justify-content: space-evenly;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
   }
   
   .productCard{
     position: relative;
     background-color: #FDFDFD;
-    margin: 1rem;
     flex: 1 0 25rem;
     max-width: 20rem;
     max-height: 50rem;

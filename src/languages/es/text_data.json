@@ -16,7 +16,8 @@
   "man_data": {
     "btn-cart":{
       "text1": "Añadir a la cesta",
-      "text2": "Comprar ahora"
+      "text2": "Comprar ahora",
+      "text3": "Eliminar de la cesta"
     },
     "btn-back":{
       "text": "Volver"
@@ -45,13 +46,13 @@
         "quantity": "100"
       },
       "MOUSEGAMINGTHREADRIPPER": {
-        "name": "Ratón Gamer ThreadRipper",
+        "name": "Ratón ThreadRipper",
         "price": "80",
         "type": "Ratón Gamer",
         "quantity": "300"
       },
       "KEYBOARDGAMING": {
-        "name": "Teclado Gamer Dell 2030",
+        "name": "Teclado Gamer Dell",
         "price": "120",
         "type": "Teclado Gamer",
         "quantity": "200"
@@ -63,7 +64,7 @@
         "quantity": "50"
       },
       "GAMINGCHAIRSX": {
-        "name": "Silla Gamer Andovia TK70",
+        "name": "Silla Gamer Andovia",
         "price": "300",
         "type": "Silla Gamer",
         "quantity": "100"
@@ -81,7 +82,7 @@
         "quantity": "70"
       },
       "SAMSUNGGALAXYS23ULTRA": {
-        "name": "Samsung Galaxy S23 Ultra",
+        "name": "Samsung Galaxy S23",
         "price": "1200",
         "type": "Teléfono inteligente",
         "quantity": "120"

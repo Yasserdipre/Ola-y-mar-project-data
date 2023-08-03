@@ -1,0 +1,22 @@
+.products {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products-ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.products-li {
+  flex: 0 0 calc(20% - 1rem); /* Ancho de las cards ajustado para mostrar 5 por línea */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 4px;
+  padding: 1rem;
+}
+

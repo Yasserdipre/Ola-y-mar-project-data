@@ -16,7 +16,8 @@
   "man_data": {
     "btn-cart":{
       "text1": "Add to cart",
-      "text2": "Buy now"
+      "text2": "Buy now",
+      "text3": "Delete from cart"
     },
     "btn-back":{
       "text": "Go back"
@@ -45,13 +46,13 @@
         "quantity": "100"
       },
       "MOUSEGAMINGTHREADRIPPER": {
-        "name": "Gaming Mouse ThreadRipper",
+        "name": "Gaming Mouse",
         "price": "80",
         "type": "Gaming Mouse",
         "quantity": "300"
       },
       "KEYBOARDGAMING": {
-        "name": "Dell 2030 Gaming Keyboard",
+        "name": "Dell Gaming Keyboard",
         "price": "120",
         "type": "Gaming Keyboard",
         "quantity": "200"
@@ -63,7 +64,7 @@
         "quantity": "50"
       },
       "GAMINGCHAIRSX": {
-        "name": "Andovia TK70 Gaming Chair",
+        "name": "Andovia Gaming Chair",
         "price": "300",
         "type": "Gaming Chair",
         "quantity": "100"
@@ -75,13 +76,13 @@
         "quantity": "80"
       },
       "BIGCHAIRGAMING60SLX": {
-        "name": "60SLX Big Gaming Chair",
+        "name": "Big Gaming Chair",
         "price": "500",
         "type": "Big Gaming Chair",
         "quantity": "70"
       },
       "SAMSUNGGALAXYS23ULTRA": {
-        "name": "Samsung Galaxy S23 Ultra",
+        "name": "Samsung Galaxy S23",
         "price": "1200",
         "type": "Smartphone",
         "quantity": "120"
