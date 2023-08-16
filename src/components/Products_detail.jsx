@@ -1,17 +1,31 @@
 import { useParams } from "react-router-dom";
-import images from "./import_images";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useCart } from "../hooks/useCart";
 import { BackButton } from "./Back_button";
 import PropTypes from "prop-types";
+import { request } from "./Axios";
+import { Linkname } from "../../link";
 
-export const Details = ({ products }) => {
+const link = Linkname()
+
+export const Details = () => {
+   const [products, setProducts] = useState([]);
    const { product } = useParams();
-   const productImage = images[product];
-   const selectedProduct = products.find((p) => p.name.replace(/\s+/g, "") === product);
    const { addToCart, cart, removeFromCart } = useCart();
-   const isProductInCart = cart.some((item) => item.id === selectedProduct.id);
+   useEffect(() => {
+      request("get", "/products")
+         .then(response => {
+            setProducts(response);
+         })
+         .catch(error => {
+            console.error("Error al hacer la solicitud:", error);
+         });
+   }, []);
+
+   const selectedProduct = products.find((p) => p.name.replace(/\s+/g, "") === product);
+
+   const isProductInCart = cart.some(item => item.id === selectedProduct?.id);
 
    const handleAddToCart = () => {
       if (isProductInCart) {
@@ -21,9 +35,26 @@ export const Details = ({ products }) => {
       }
    };
 
+   useEffect(() => {
+      // El segundo efecto se ejecuta cuando selectedProduct se actualiza
+      if (selectedProduct) {
+         console.log("Otra lógica con selectedProduct:", selectedProduct);
+         // Realiza cualquier otra lógica que dependa de selectedProduct aquí
+      }
+   }, [selectedProduct]);
+
    return (
       <>
-         <Dashboard productImage={productImage} name={product} isProductInCart={isProductInCart} handleAddToCart={handleAddToCart} />
+         {/* Renderizar el componente Dashboard con los datos del producto */}
+         {selectedProduct && (
+            <Dashboard
+               productImage={selectedProduct.image}
+               newname={selectedProduct.name}
+               price={selectedProduct.price}
+               isProductInCart={isProductInCart}
+               handleAddToCart={handleAddToCart}
+            />
+         )}
       </>
    );
 };
@@ -39,9 +70,9 @@ Details.propTypes = {
 };
 
 
-const Dashboard = ({ productImage, name, isProductInCart, handleAddToCart }) => {
+const Dashboard = ({ productImage, price, newname, isProductInCart, handleAddToCart }) => {
    const [t] = useTranslation();
-
+   const name = newname.replace(/\s+/g, "");
 
    return (
       <>
@@ -50,14 +81,14 @@ const Dashboard = ({ productImage, name, isProductInCart, handleAddToCart }) => 
             <div className="row justify-content-center">
                <div className="col-4 img-lg">
                   <div className="img-fluid">
-                     {productImage && <img src={productImage} alt="" className="w-100" />}
+                     {productImage && <img src={`${link}${productImage}`} alt="" className="w-100" />}
                   </div>
                </div>
                <div className="col-4">
                   <div className="product-details">
                      <h2 className="product-name">{t(`man_data.electronic.${name}.name`)}</h2>
                      <h4 className="product-type">{t(`man_data.electronic.${name}.type`)}</h4>
-                     <h3 className="product-price">{t(`man_data.electronic.${name}.price`)}€</h3>
+                     <h3 className="product-price">{price}€</h3>
                   </div>
                   <TallaSelector />
                   <div className="product-actions mt-3">
@@ -77,7 +108,8 @@ const Dashboard = ({ productImage, name, isProductInCart, handleAddToCart }) => 
 
 Dashboard.propTypes = {
    productImage: PropTypes.string, // productImage debe ser una cadena (string).
-   name: PropTypes.string, // name debe ser una cadena (string).
+   price: PropTypes.number,
+   newname: PropTypes.string, // name debe ser una cadena (string).
    isProductInCart: PropTypes.bool, // isProductInCart debe ser un booleano (true/false).
    handleAddToCart: PropTypes.func, // handleAddToCart debe ser una función (func).
 };

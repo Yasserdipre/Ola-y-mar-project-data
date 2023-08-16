@@ -13,6 +13,19 @@
     "contain": "Hola Darlin, esta es nuestra primera prueba de lenguage.",
     "carousel_text": "Mira nuestras nuevas ofertas"
   },
+  "contact_form": {
+    "h1": "Formulario de Contacto",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "phone": "Teléfono",
+    "email": "Correo Electrónico",
+    "reason": "Motivo",
+    "message": "Mensaje",
+    "missingFields": "Primero completa estos campos: {{fields}}",
+    "sentSuccessfully": "Enviado correctamente",
+    "errorSending": "Error al enviar el formulario",
+    "submitButton": "Enviar Mensaje"
+  },
   "man_data": {
     "btn-cart":{
       "text1": "Añadir a la cesta",

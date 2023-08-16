@@ -69,7 +69,7 @@ export const CarouselItem = ({ clases, src, title_princ, clase_text_titular }) =
             <h1 className={clase_text_titular}>{title_princ}</h1>
             <div className="inline-block mt-5">
                <Link to="/service"><button type="button" className="btn btn-dark me-2 padding-y">{t("navbar.service")}</button></Link>
-               <Link to="/contact"><button type="button" className="btn btn-primary ms-2 padding-y">{t("navbar.contact")}</button></Link>
+               <Link to="/contactForm"><button type="button" className="btn btn-primary ms-2 padding-y">{t("navbar.contact")}</button></Link>
             </div>
          </div>
       </div>

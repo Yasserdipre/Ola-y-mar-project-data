@@ -3,7 +3,8 @@ export const cartInitialState = JSON.parse(window.localStorage.getItem("cart")) 
 export const CART_ACTION_TYPES = {
    ADD_TO_CART: "ADD_TO_CART",
    REMOVE_FROM_CART: "REMOVE_FROM_CART",
-   CLEAR_CART: "CLEAR_CART"
+   CLEAR_CART: "CLEAR_CART",
+   MINUS_FROM_CART: "MINUS_FROM_CART"
 }
 
 // update localStorage with state for cart
@@ -44,6 +45,24 @@ const UPDATE_STATE_BY_ACTION = {
       const newState = state.filter(item => item.id !== id)
       updateLocalStorage(newState)
       return newState
+   },
+   [CART_ACTION_TYPES.MINUS_FROM_CART]: (state, action) => {
+      const { id } = action.payload;
+      const productInCart = state.find(item => item.id === id);
+
+      if (productInCart && productInCart.quantity > 1) {
+         const newState = state.map(item => {
+            if (item.id === id) {
+               return { ...item, quantity: item.quantity - 1 };
+            }
+            return item;
+         });
+
+         updateLocalStorage(newState);
+         return newState;
+      }
+
+      return state;
    },
    [CART_ACTION_TYPES.CLEAR_CART]: () => {
       updateLocalStorage([])

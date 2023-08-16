@@ -10,3 +10,7 @@
     display: flex;
     gap: 1rem;
 }
+
+.form-range {
+    height: 0;
+}

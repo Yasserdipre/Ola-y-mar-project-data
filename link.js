@@ -1,0 +1,1 @@
+export const Linkname = () => {return "https://apigalicustom-eyvg-dev.fl0.io"}

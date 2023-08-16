@@ -13,6 +13,19 @@
     "contain": "Hello Darlin, this our first Language test",
     "carousel_text": "See our new offers"
   },
+    "contact_form": {
+      "h1": "Contact Form",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone",
+      "email": "Email",
+      "reason": "Reason",
+      "message": "Message",
+      "missingFields": "Please complete the following fields: {{fields}}",
+      "sentSuccessfully": "Sent successfully",
+      "errorSending": "Error sending the form",
+      "submitButton": "Send"
+    },
   "man_data": {
     "btn-cart":{
       "text1": "Add to cart",

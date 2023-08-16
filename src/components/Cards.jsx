@@ -13,6 +13,8 @@ import { useCart } from "../hooks/useCart";
 import { useNavigate } from "react-router-dom";
 import { useSave } from "../hooks/useSave";
 import PropTypes from "prop-types";
+import { Linkname } from "../../link";
+const link = Linkname()
 
 export const CardProducts = ({ products }) => {
    const { addToCart, cart, removeFromCart } = useCart();
@@ -128,7 +130,7 @@ export const ProductCard = ({
                   })
                }
             >
-               <img src={product.image} alt="product-img" className="w-100" />
+               <img src={`${link}${product.image}`} alt="product-img" className="w-100" />
                <div className="productCard__content">
                   <h3 className="productName text-center">
                      {t(
@@ -137,12 +139,7 @@ export const ProductCard = ({
                   </h3>
                   <div className="displayStack__1">
                      <div className="productPrice">
-                        {t(
-                           `man_data.electronic.${product.name.replace(
-                              /\s+/g,
-                              ""
-                           )}.price`
-                        )}
+                        {product.price}
                 €
                      </div>
                      <div className="productSales">
@@ -169,6 +166,7 @@ export const ProductCard = ({
 ProductCard.propTypes = {
    product: PropTypes.shape({
       id: PropTypes.number.isRequired,
+      price: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
       totalSales: PropTypes.number.isRequired,
